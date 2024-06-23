@@ -89,7 +89,7 @@ onUnmounted(() => {
   // remove all immediate children id's
   if (props.data && props.data.length) {
     props.data.forEach((item) => {
-      removeId(item.id);
+      removeId(item[props.idKey]);
     });
   }
   selectedItems.value = get();
